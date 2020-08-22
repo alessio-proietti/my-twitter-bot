@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const config = require('./config')
-const Twit = require('twitter')
+const Twitter = require('twitter')
 
 const T = new Twitter(config)
 
