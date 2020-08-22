@@ -11,11 +11,11 @@ app.get('/', (req, res) => {
 
 var cron = require('node-cron');
 
-cron.schedule('* * * * *', () => {
+/*cron.schedule('* * * * *', () => {
   T.post('statuses/update', { status: 'Ciao Amici! Ecco un numero random: \n ' + Math.random() }, function (err, tweet, response) {
     console.log('running a task every minute');
   })
-});
+});*/
 
 app.listen(process.env.PORT || 3000,
   () => console.log("Server is running..."));
