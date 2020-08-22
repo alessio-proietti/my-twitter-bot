@@ -6,9 +6,9 @@ const Twitter = require('twitter')
 const T = new Twitter(config)
 
 app.get('/', (req, res) => {
-  T.post('statuses/update', { status: 'Ciao Amici!' }, function (err, data, response) {
+  T.post('statuses/update', { status: 'Ciao Amici!' }, function (err, tweet, response) {
     res.send({
-      data: data,
+      data: tweet,
       response: response,
       hello: 'world'
     })
