@@ -6,10 +6,12 @@ const Twitter = require('twitter')
 const T = new Twitter(config)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
   T.post('statuses/update', { status: 'Ciao Amici!' }, function (err, data, response) {
-    res.send(data)
-    res.send(response)
+    res.send({
+      data: data,
+      response: response,
+      hello: 'world'
+    })
   })
 })
 
