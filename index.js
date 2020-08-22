@@ -6,7 +6,7 @@ const cron = require('node-cron');
 const T = new Twitter(config)
 
 app.get('/', (req, res) => {
-  client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
+  T.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
     if(error) throw error;
     res.send('Ciao Amici!')
     console.log(tweet);  // Tweet body.
