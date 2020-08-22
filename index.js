@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const config = require('./config')
-const T = require('twit')
+const Twit = require('twit')
+
+var T = new Twit(config)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
