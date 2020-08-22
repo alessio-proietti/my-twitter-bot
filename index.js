@@ -3,7 +3,7 @@ const app = express()
 const config = require('./config')
 const Twit = require('twitter')
 
-var T = new Twitter(config)
+const T = new Twitter(config)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
