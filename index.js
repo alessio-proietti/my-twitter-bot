@@ -1,3 +1,7 @@
+/**
+ * @author Alessio Proietti <alessio.proietti [at] protonmail.com>
+ */
+
 const express = require('express')
 const app = express()
 const config = require('./config')
