@@ -1,14 +1,15 @@
 const express = require('express')
 const app = express()
 const config = require('./config')
-const Twit = require('twit')
+const Twit = require('twitter')
 
-var T = new Twit(config)
+var T = new Twitter(config)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-  T.post('statuses/update', { status: 'Ciao Amici!' }, function(err, data, response) {
-    console.log(data)
+  T.post('statuses/update', { status: 'Ciao Amici!' }, function (err, data, response) {
+    res.send(data)
+    res.send(response)
   })
 })
 
