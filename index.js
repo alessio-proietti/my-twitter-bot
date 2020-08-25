@@ -6,8 +6,11 @@ const express = require('express')
 const app = express()
 const config = require('./config')
 const Twitter = require('twitter')
-const cron = require('node-cron');
-const T = new Twitter(config)
+const cron = require('node-cron')
+var buildUrl = require('build-url');
+
+
+const T = new Twitter(config.twitterApi)
 
 app.get('/', (req, res) => {
   T.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
