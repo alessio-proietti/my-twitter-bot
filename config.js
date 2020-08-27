@@ -17,7 +17,7 @@ module.exports = {
         to: process.env.TWILIO_NUMBER_TO,
         from:process.env.TWILIO_NUMBER_FROM,
     },
-    twiliobody: "Ciao Alessio! Questo messaggio lo hai scritto pochi minuti fa tu sul tuo editor preferito. Bye Sarchiapone :)"
+    twiliobody: "Ciao Alessio! Questo messaggio lo hai scritto pochi minuti fa tu sul tuo editor preferito. Bye Sarchiapone :)",
     oai: "http://www.openarchives.org/OAI/2.0/",
     arxiv: "http://arxiv.org/OAI/arXiv/"
 }
