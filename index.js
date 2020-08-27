@@ -8,7 +8,6 @@ const config = require('./config')
 const Twitter = require('twitter')
 const cron = require('node-cron')
 var buildUrl = require('build-url');
-const client = require('twilio')(accountSid, authToken);
 const T = new Twitter(config.twitterApi)
 
 
@@ -16,6 +15,7 @@ const accountSid = config.accountSid;
 const authToken = config.authToken;
 
 
+const client = require('twilio')(accountSid, authToken);
 
 app.get('/', (req, res) => {
   T.post('statuses/update', { status: 'Hello Master! This is one of my test messages.' }, function (error, tweet, response) {
